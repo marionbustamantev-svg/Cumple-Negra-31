@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cumpleaños Negra 31</title>
+<meta name="description" content="Camping en Radal 7 Tazas, 14 y 15 de noviembre. Confirma, anótate con un básico y revisa qué llevar.">
+<meta property="og:title" content="Cumpleaños Negra 31">
+<meta property="og:description" content="Camping en Radal 7 Tazas, 14 y 15 de noviembre. ¿Vienes?">
+<meta property="og:image" content="afiche.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Patrick+Hand&family=Karla:wght@400;600&display=swap">
+<style>
+/* Layout: una sola columna tipo afiche pegado sobre papel; afiche → confirmar → entrada → básicos compartidos → mochila */
+:root{
+  --paper:#e9e8e4; --sheet:#f6f5f1; --ink:#141312; --soft:#5b5852;
+  --tent:#e9a94b; --boot:#a4512a; --lila:#8d5aa8; --line:#c9c6bf; --bad:#a3271d;
+  --display:"Caveat Brush","Patrick Hand",cursive;
+  --hand:"Patrick Hand","Comic Sans MS",cursive;
+  --body:"Karla",system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;
+  background-image:radial-gradient(rgba(0,0,0,.05) 1px,transparent 1px);background-size:7px 7px;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:620px;margin:0 auto;padding-inline:16px;padding-block:20px 56px;display:flex;flex-direction:column;gap:40px}
+.poster{display:block;width:100%;height:auto;aspect-ratio:1000/1410;box-shadow:0 2px 14px rgba(0,0,0,.18);transform:rotate(-.6deg)}
+h1,h2{font-family:var(--display);font-weight:400;line-height:1;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,11vw,4rem)}
+h2{font-size:2.1rem}
+.kicker{font-family:var(--hand);text-transform:uppercase;letter-spacing:.14em;color:var(--soft);font-size:1rem;margin:0 0 4px}
+section{display:flex;flex-direction:column;gap:14px}
+p{margin:0}
+.facts{font-family:var(--hand);text-transform:uppercase;letter-spacing:.1em;font-size:1.15rem;display:flex;flex-direction:column;gap:2px}
+label.name{display:flex;flex-direction:column;gap:6px;font-family:var(--hand);font-size:1.1rem}
+input[type=text]{font:inherit;font-family:var(--body);padding:12px 14px;border:2px solid var(--ink);border-radius:4px;background:var(--sheet);color:var(--ink);width:100%}
+.err{color:var(--bad);font-size:.95rem}
+.choices{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--display);font-size:1.5rem;padding:10px 22px;border:2.5px solid var(--ink);border-radius:255px 18px 225px 18px/18px 225px 18px 255px;
+  background:var(--sheet);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+.choices .btn{flex:1 1 180px}
+.btn:hover{transform:rotate(-1deg)}
+.btn:focus-visible,input:focus-visible,a:focus-visible,.mini:focus-visible{outline:3px solid var(--lila);outline-offset:3px}
+.btn[aria-pressed=true],.btn.go{background:var(--ink);color:var(--sheet)}
+.btn.yes[aria-pressed=true]{background:var(--boot);border-color:var(--boot)}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:22px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:start}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:2.4rem;line-height:.9;color:var(--boot)}
+.steps li>div{min-width:0;display:flex;flex-direction:column;gap:10px}
+.steps h3{font-family:var(--hand);font-size:1.3rem;font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.08em}
+.small{font-size:.92rem;color:var(--soft)}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price strong{font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.price span{font-family:var(--hand);font-size:1.2rem}
+.note{border-left:3px solid var(--tent);padding-left:12px}
+.sheet{background:var(--sheet);padding:22px 20px;box-shadow:0 2px 12px rgba(0,0,0,.14)}
+.sheet.a{transform:rotate(.4deg)} .sheet.b{transform:rotate(-.3deg)}
+.count{font-family:var(--hand);color:var(--boot);font-size:1.1rem}
+.group{font-family:var(--hand);text-transform:uppercase;letter-spacing:.14em;color:var(--soft);font-size:.95rem;margin:14px 0 2px}
+.items{list-style:none;margin:0;padding:0}
+.items label{display:flex;gap:12px;align-items:center;min-height:36px;font-family:var(--hand);font-size:1.25rem;line-height:1.1;cursor:pointer}
+.items input[type=checkbox]{appearance:none;-webkit-appearance:none;flex:none;width:22px;height:22px;border:2px solid var(--ink);border-radius:5px 3px 6px 3px;background:transparent;margin:0;cursor:pointer;display:grid;place-content:center}
+.items input:checked::after{content:"✓";font-size:22px;line-height:1;color:var(--boot);transform:translateY(-3px) rotate(-8deg)}
+.items input:checked+span{text-decoration:line-through;color:var(--soft)}
+.row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px;min-height:36px;padding-block:2px}
+.row .what{font-family:var(--hand);font-size:1.25rem;line-height:1.1;min-width:0}
+.row .side{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.who{font-family:var(--hand);font-size:1.1rem;color:var(--boot)}
+.who.fijo{color:var(--lila)}
+.mini{font-family:var(--hand);font-size:1.05rem;padding:3px 12px;border:2px dashed var(--ink);border-radius:14px;background:transparent;color:var(--ink);cursor:pointer}
+.mini[aria-pressed=true]{border-style:solid;background:var(--tent)}
+.mini:disabled{opacity:.5;cursor:wait}
+.picks{font-family:var(--hand);font-size:1.15rem;background:var(--tent);padding:8px 12px;margin-top:12px}
+.van{font-family:var(--hand);font-size:1.2rem}
+.van b{font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--boot)}
+.plan{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.plan li{display:grid;grid-template-columns:minmax(0,9.5rem) minmax(0,1fr);gap:4px 16px;align-items:baseline}
+.plan .maps{color:var(--boot);font-weight:600;white-space:nowrap}
+.plan .cuando{font-family:var(--hand);text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem;color:var(--boot)}
+@media (max-width:440px){.plan li{grid-template-columns:1fr}}
+.tape{align-self:center;font-family:var(--display);font-size:1.5rem;background:var(--tent);padding:4px 18px;transform:rotate(-2deg);text-align:center}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="poster" src="afiche.jpg" width="1000" height="1410" alt="Afiche: Cumpleaños Negra 31. Sábado y domingo, 14 y 15 de noviembre. El Bolsón, Parque Nacional Radal 7 Tazas, Molina. Lleva traje de baño.">
+
+  <section aria-labelledby="t-rsvp">
+    <div>
+      <p class="kicker">Nos vamos de camping</p>
+      <h1 id="t-rsvp">¿Vienes?</h1>
+    </div>
+    <p class="facts"><span>Viernes 13 al domingo 15 de noviembre</span><span>El Bolsón · Parque Nacional Radal 7 Tazas · Molina</span></p>
+    <label class="name" for="nombre">Tu nombre
+      <input type="text" id="nombre" autocomplete="given-name" maxlength="40" placeholder="Para que la Negra sepa quién confirma">
+    </label>
+    <p class="err" id="err-nombre" role="alert" hidden>Escribe tu nombre primero.</p>
+    <div class="choices">
+      <button type="button" class="btn yes" id="btn-si" aria-pressed="false">¡Sí, voy!</button>
+      <button type="button" class="btn" id="btn-no" aria-pressed="false">No puedo ir</button>
+    </div>
+    <p class="van" id="van" hidden></p>
+
+    <div id="panel-si" hidden>
+      <ol class="steps">
+        <li><div>
+          <h3>Elige qué aportas</h3>
+          <p>En la lista de básicos, toca <b>Yo lo llevo</b> en lo que quieras traer. Queda anotado a tu nombre para que todos lo vean.</p>
+          <p class="small" id="picks-corto"></p>
+        </div></li>
+        <li><div>
+          <h3>Avísale a la Negra</h3>
+          <p>Se abre WhatsApp con el mensaje listo, incluyendo lo que vas a llevar. Envíaselo a Marion.</p>
+          <a class="btn go" id="wa-si" target="_blank" rel="noopener" href="#">Confirmar por WhatsApp</a>
+        </div></li>
+        <li><div>
+          <h3>Compra tu entrada y camping</h3>
+          <p>En pasesparques.cl. El camping cuesta $7.000 por persona.</p>
+          <a class="btn go" target="_blank" rel="noopener" id="pases-1" href="#">Ir a pasesparques.cl</a>
+        </div></li>
+        <li><div>
+          <h3>Agéndalo</h3>
+          <p>El evento queda con el lugar, el link de la entrada y la lista de qué llevar.</p>
+          <a class="btn go" id="cal" target="_blank" rel="noopener" href="#">Agregar a Google Calendar</a>
+          <p class="small">¿Usas otro calendario? Crea un evento de todo el día del 13 al 15 de noviembre de 2026: “Cumpleaños Negra 31, camping en Radal 7 Tazas”.</p>
+        </div></li>
+      </ol>
+    </div>
+
+    <div id="panel-no" hidden>
+      <p>Qué pena, se te va a extrañar. Avísale igual para que no te espere.</p>
+      <p style="margin-top:12px"><a class="btn go" id="wa-no" target="_blank" rel="noopener" href="#">Avisar por WhatsApp</a></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-plan">
+    <div>
+      <p class="kicker">Cómo nos organizamos</p>
+      <h2 id="t-plan">El plan</h2>
+    </div>
+    <ol class="plan">
+      <li><span class="cuando">Viernes 13, noche</span><span>Llegamos a un Airbnb que reserva la Negra, para partir temprano. Queda por el sector de Cabañas Radal 7 Tazas “Donde Mónica” (ubicación aproximada). <a class="maps" target="_blank" rel="noopener" href="https://www.google.com/maps/place/CABAÑAS+RADAL+7+TAZAS+%7C+DONDE+MONICA/@-35.4178904,-71.0667097,17z/data=!4m12!1m5!3m4!2zMzXCsDI1JzA0LjQiUyA3McKwMDMnNTAuOSJX!8m2!3d-35.4178904!4d-71.0641348!3m5!1s0x96650d8ef81cd05f:0x74fb16a252628572!8m2!3d-35.4173913!4d-71.064179!16s%2Fg%2F11j3y5h9dd!18m1!1e1">Ver en Google Maps</a></span></li>
+      <li><span class="cuando">Sábado 14, mañana</span><span>Salimos al parque y caminamos unos 10 km desde la administración de CONAF en Parque Inglés hasta el camping El Bolsón.</span></li>
+      <li><span class="cuando">Domingo 15</span><span>Desarmamos el camping y volvemos.</span></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="t-entrada">
+    <div>
+      <p class="kicker">Antes de ir</p>
+      <h2 id="t-entrada">Entrada y camping</h2>
+    </div>
+    <div class="price"><strong>$7.000</strong><span>por persona · una noche en el camping El Bolsón</span></div>
+    <p>Cada uno compra su entrada al parque y su camping en pasesparques.cl. La niña también necesita entrada (categoría Niño, 0 a 12 años).</p>
+    <p><a class="btn go" target="_blank" rel="noopener" id="pases-2" href="#">Comprar en pasesparques.cl</a></p>
+    <p class="note">Al camping se llega caminando unos 10 km desde la administración de CONAF en Parque Inglés. Lleva todo en una mochila cómoda y lo más liviano posible.</p>
+  </section>
+
+  <section class="sheet a" aria-labelledby="t-basicos">
+    <h2 id="t-basicos">Básicos para compartir</h2>
+    <p>La comida es sencilla: la Negra lleva más cosas y se encarga del carbón para su asadera (lo sube un arriero). Anótate con algo de esta lista para que no se repita nada.</p>
+    <p class="small" id="estado-lista" aria-live="polite"></p>
+    <div id="basicos"></div>
+    <p class="picks" id="picks" hidden></p>
+  </section>
+
+  <section class="sheet b" aria-labelledby="t-lista">
+    <h2 id="t-lista">Tu mochila</h2>
+    <p class="small">Lo que lleva cada uno. Ve marcando lo que ya tienes; se guarda en este teléfono.</p>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div id="lista"></div>
+  </section>
+
+  <p class="tape">¡Y no olvides el traje de baño!</p>
+</div>
+
+<script>
+// ====== Configuración ======
+// Tu número de WhatsApp con código de país y sin "+" ni espacios, ej. "56912345678".
+// Si lo dejas vacío, el invitado elige a quién mandarle el mensaje.
+const WHATSAPP = "56977750611";
+const PASES = "https://www.pasesparques.cl/es/molina-244/parque-nacional-radal-siete-tazas-camping-el-bolson-3594";
+
+// Básicos compartidos. Los ids deben coincidir con ITEMS en lib/logica.js.
+// Un tercer valor deja la cosa asignada fija (también en FIJOS de lib/logica.js).
+const BASICOS = [
+  ["Cocina", [
+    ["asadera", "Asadera y carbón", "La Negra"],
+    ["cocinilla1", "Cocinilla 1 con gas de repuesto", "La Negra"],
+    ["cocinilla2", "Cocinilla 2 con gas de repuesto"],
+    ["olla1", "Olla 1", "La Negra"],
+    ["olla2", "Olla 2"],
+    ["olla3", "Olla 3"],
+    ["sarten1", "Sartén 1", "La Negra"],
+    ["sarten2", "Sartén 2"],
+    ["tetera", "Tetera o hervidor"],
+    ["tabla", "Tabla y cuchillo"],
+    ["pinzas", "Pinzas y espátula"],
+    ["fuego", "Encendedor o fósforos"],
+    ["lavaloza", "Lavaloza, esponja y paño"],
+    ["basura", "Bolsas de basura"]
+  ]],
+  ["Comida básica", [
+    ["cafe", "Café, termo y mate", "La Negra"],
+    ["picoteo", "Picoteo para compartir", "La Negra"],
+    ["pan", "Pan para el desayuno"],
+    ["te", "Té y azúcar"],
+    ["leche", "Leche o bebida vegetal"],
+    ["agregados", "Mantequilla, palta o algo para el pan"],
+    ["fruta", "Fruta"]
+  ]],
+  ["Varios", [
+    ["botiquin", "Botiquín"]
+  ]]
+];
+const MOCHILA = [
+  ["Para dormir", ["Carpa (una por pareja)", "Saco de dormir", "Colchoneta o aislante", "Almohada chica"]],
+  ["Ropa", ["Traje de baño", "Toalla", "Zapatillas o botas de trekking", "Chalas para el agua", "Ropa abrigada para la noche", "Cortaviento o parka", "Jockey o gorro para el sol", "Muda de ropa"]],
+  ["Para comer", ["Plato hondo, cubiertos y tazón", "Botella de agua", "Colación para la caminata", "Lo que quieras tomar"]],
+  ["Cuidado personal", ["Bloqueador solar", "Repelente", "Útiles de aseo", "Papel higiénico", "Tus remedios"]],
+  ["No olvidar", ["Mochila cómoda para caminar", "Linterna o frontal", "Batería portátil", "Bolsa para tu basura", "Carnet y entrada comprada"]]
+];
+
+// ====== Estado ======
+const KEY = "negra31";
+let st = {r: null, n: "", c: {}, p: {}};
+try { st = Object.assign(st, JSON.parse(localStorage.getItem(KEY) || "{}")); st.p = st.p || {}; st.c = st.c || {}; } catch (e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
+const $ = id => document.getElementById(id);
+const clave = s => String(s || "").replace(/\s+/g, " ").trim().toLowerCase();
+
+let enLinea = false;               // true cuando la API responde
+let servidor = {asignados: {}, van: [], noVan: []};
+let ocupado = false;
+
+const todos = BASICOS.flatMap(g => g[1]);
+const nombreDe = id => (todos.find(it => it[0] === id) || [id, id])[1];
+const quienLleva = it => it[2] || (enLinea ? (servidor.asignados[it[0]] || "") : "");
+const esMio = quien => !!st.n.trim() && clave(quien) === clave(st.n);
+const misAportes = () => enLinea
+  ? todos.filter(it => !it[2] && esMio(servidor.asignados[it[0]])).map(it => it[1])
+  : Object.keys(st.p).filter(k => st.p[k]).map(nombreDe);
+
+// ====== API ======
+async function api(body) {
+  const r = await fetch("/api/estado", body ? {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)} : {cache: "no-store"});
+  const data = await r.json().catch(() => ({}));
+  if (data && data.asignados) { servidor = data; enLinea = true; }
+  if (!r.ok) { const e = new Error(data.error || "error"); e.data = data; e.status = r.status; throw e; }
+  return data;
+}
+async function cargar() {
+  try { await api(); $("estado-lista").textContent = ""; }
+  catch (e) {
+    enLinea = false;
+    $("estado-lista").textContent = "La lista compartida no está disponible ahora. Marca lo que quieres llevar y va en tu mensaje de WhatsApp.";
+  }
+  pintarTodo();
+}
+function pedirNombre() {
+  $("err-nombre").hidden = false; $("nombre").focus();
+  $("nombre").scrollIntoView({block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}
+
+// ====== Básicos compartidos ======
+function pintarBasicos() {
+  const cont = $("basicos"); cont.textContent = "";
+  BASICOS.forEach(([grupo, items]) => {
+    const h = document.createElement("p"); h.className = "group"; h.textContent = grupo; cont.appendChild(h);
+    const ul = document.createElement("ul"); ul.className = "items";
+    items.forEach(it => {
+      const [id, label, fijo] = it;
+      const li = document.createElement("li"); li.className = "row";
+      const w = document.createElement("span"); w.className = "what"; w.textContent = label;
+      const side = document.createElement("span"); side.className = "side";
+      li.append(w, side);
+      const quien = quienLleva(it);
+      if (quien && !(enLinea && esMio(quien) && !fijo)) {
+        const s = document.createElement("span"); s.className = "who" + (fijo ? " fijo" : "");
+        s.textContent = "Lo lleva " + quien; side.appendChild(s);
+      } else if (enLinea) {
+        const mio = !!quien;
+        const b = document.createElement("button"); b.type = "button"; b.className = "mini";
+        b.setAttribute("aria-pressed", mio); b.disabled = ocupado;
+        b.textContent = mio ? "Lo llevas tú · soltar" : "Yo lo llevo";
+        b.addEventListener("click", () => tomar(id, mio));
+        side.appendChild(b);
+      } else {
+        const b = document.createElement("button"); b.type = "button"; b.className = "mini";
+        b.setAttribute("aria-pressed", !!st.p[id]);
+        b.textContent = st.p[id] ? "Lo llevo yo ✓" : "Yo lo llevo";
+        b.addEventListener("click", () => { if (st.p[id]) delete st.p[id]; else st.p[id] = true; save(); pintarTodo(); });
+        side.appendChild(b);
+      }
+      ul.appendChild(li);
+    });
+    cont.appendChild(ul);
+  });
+  const mios = misAportes();
+  $("picks").hidden = !mios.length;
+  $("picks").textContent = !mios.length ? "" : enLinea
+    ? "Tú llevas: " + mios.join(", ") + "."
+    : "Tú llevas: " + mios.join(", ") + ". Va en tu mensaje de confirmación para que la Negra te anote.";
+  $("picks-corto").textContent = mios.length ? "Elegiste: " + mios.join(", ") + "." : "Todavía no eliges nada.";
+}
+async function tomar(id, soltar) {
+  if (!st.n.trim()) return pedirNombre();
+  ocupado = true; pintarBasicos();
+  try {
+    await api({accion: soltar ? "soltar" : "llevar", item: id, nombre: st.n});
+    $("estado-lista").textContent = soltar ? "Listo, lo soltaste." : "Anotado: " + nombreDe(id) + ".";
+  } catch (e) {
+    $("estado-lista").textContent = e.data && e.data.error === "tomado"
+      ? "Alguien se adelantó: " + nombreDe(id) + " ya lo lleva " + e.data.por + "."
+      : "No se pudo guardar. Revisa tu conexión e inténtalo de nuevo.";
+  }
+  ocupado = false; pintarTodo();
+}
+
+// ====== Confirmados ======
+function pintarVan() {
+  const n = servidor.van.length;
+  $("van").hidden = !enLinea || !n;
+  $("van").textContent = "";
+  if (enLinea && n) {
+    const b = document.createElement("b"); b.textContent = n === 1 ? "1 confirmado" : n + " confirmados";
+    $("van").append(b, document.createTextNode(": " + servidor.van.join(", ")));
+  }
+}
+
+// ====== Mochila personal ======
+const total = MOCHILA.reduce((a, g) => a + g[1].length, 0);
+MOCHILA.forEach(([grupo, items], gi) => {
+  const h = document.createElement("p"); h.className = "group"; h.textContent = grupo; $("lista").appendChild(h);
+  const ul = document.createElement("ul"); ul.className = "items";
+  items.forEach((it, i) => {
+    const id = "it-" + gi + "-" + i;
+    const li = document.createElement("li"), lb = document.createElement("label"),
+          cb = document.createElement("input"), sp = document.createElement("span");
+    cb.type = "checkbox"; cb.id = id; cb.checked = !!st.c[id]; sp.textContent = it;
+    cb.addEventListener("change", () => { st.c[id] = cb.checked; save(); contar(); });
+    lb.append(cb, sp); li.appendChild(lb); ul.appendChild(li);
+  });
+  $("lista").appendChild(ul);
+});
+function contar() {
+  const n = Object.keys(st.c).filter(k => st.c[k] && k.startsWith("it-")).length;
+  $("count").textContent = n >= total ? "¡Mochila lista!" : n + " de " + total + " cosas listas";
+}
+
+// ====== Links ======
+$("pases-1").href = PASES; $("pases-2").href = PASES;
+const detalle = "Cumpleaños 31 de la Negra. Camping El Bolsón, Parque Nacional Radal 7 Tazas, Molina.\n" +
+  "Viernes 13 en la noche: Airbnb por el sector de Cabañas Radal 7 Tazas Donde Mónica (ubicación aproximada): https://www.google.com/maps/place/CABAÑAS+RADAL+7+TAZAS+%7C+DONDE+MONICA/@-35.4178904,-71.0667097,17z/data=!4m12!1m5!3m4!2zMzXCsDI1JzA0LjQiUyA3McKwMDMnNTAuOSJX!8m2!3d-35.4178904!4d-71.0641348!3m5!1s0x96650d8ef81cd05f:0x74fb16a252628572!8m2!3d-35.4173913!4d-71.064179!16s%2Fg%2F11j3y5h9dd!18m1!1e1\nSábado 14 en la mañana partimos al parque.\n" +
+  "Se llega caminando unos 10 km desde la administración de CONAF en Parque Inglés.\n\n" +
+  "ENTRADA Y CAMPING ($7.000 por persona): " + PASES + "\n\nQUÉ LLEVAR\n" +
+  MOCHILA.map(([g, its]) => g.toUpperCase() + "\n" + its.map(i => "- " + i).join("\n")).join("\n\n");
+$("cal").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+  "&text=" + encodeURIComponent("Cumpleaños Negra 31: camping en Radal 7 Tazas") +
+  "&dates=20261113/20261116" +
+  "&location=" + encodeURIComponent("Camping El Bolsón, Parque Nacional Radal Siete Tazas, Molina, Chile") +
+  "&details=" + encodeURIComponent(detalle);
+
+function links() {
+  const soy = st.n.trim() ? "Soy " + st.n.trim() + " y " : "";
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const mios = misAportes();
+  const llevo = mios.length ? " Yo llevo: " + mios.join(", ") + "." : "";
+  const si = "¡Hola Negra! " + cap(soy + "confirmo que voy a tu cumpleaños del 13 al 15 de noviembre en Radal 7 Tazas.") + llevo + " ¡Nos vemos en el camping!";
+  const no = "Hola Negra. " + cap(soy + "no voy a poder ir a tu cumpleaños del 13 al 15 de noviembre. ¡Que lo pasen increíble!");
+  const base = "https://wa.me/" + WHATSAPP.replace(/\D/g, "") + "?text=";
+  $("wa-si").href = base + encodeURIComponent(si);
+  $("wa-no").href = base + encodeURIComponent(no);
+}
+
+// ====== Confirmar ======
+function pintarRsvp() {
+  $("btn-si").setAttribute("aria-pressed", st.r === "si");
+  $("btn-no").setAttribute("aria-pressed", st.r === "no");
+  $("panel-si").hidden = st.r !== "si";
+  $("panel-no").hidden = st.r !== "no";
+}
+async function responder(r) {
+  if (!st.n.trim()) return pedirNombre();
+  st.r = r; save(); pintarTodo();
+  if (enLinea) { try { await api({accion: "rsvp", respuesta: r, nombre: st.n}); } catch (e) {} pintarTodo(); }
+}
+function pintarTodo() { pintarRsvp(); pintarBasicos(); pintarVan(); links(); }
+
+let tNombre;
+$("nombre").value = st.n;
+$("nombre").addEventListener("input", e => {
+  st.n = e.target.value; save(); $("err-nombre").hidden = !!st.n.trim() || $("err-nombre").hidden;
+  clearTimeout(tNombre); tNombre = setTimeout(pintarTodo, 250);
+});
+$("btn-si").addEventListener("click", () => responder("si"));
+$("btn-no").addEventListener("click", () => responder("no"));
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") cargar(); });
+
+contar(); pintarTodo(); cargar();
+</script>
+</body>
+</html>
